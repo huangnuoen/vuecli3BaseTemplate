@@ -42,8 +42,8 @@ vue+webpack4+vant+axios+less+postcss+prettier
 1. `api/index.js` 中导出所有`api`
 2. 在`api/config.js`对 axios 作了一层封装
 3. 接口模块化管理，命名统一使用后台提供的接口路径，如套餐模块的接口在 api/package, 收藏接口在 api/collect
+   1. 采用后台接口命名是为了和后台统一，有异议的可以不遵循，
 4. `api/index.js` 中导出所有`api`,并且挂载在 vue.prototype.api 上，在` vue` 单文件中不需要再引入，可以直接调用`this.$api.collect.add()`
-5. 后端突然换接口风格。。原来的写法 hold 不住了 3 4 5 层的接口 ，文件名、变量名和 url 路径第一级同名，接口调用的方法名和接口用法对应即可，不需要同名
    
 这里对它做了一层封装，最后挂载在Vue.prototype.$api上
 
